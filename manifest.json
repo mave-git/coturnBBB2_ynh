@@ -1,12 +1,13 @@
 {
-    "name": "Coturn",
-    "id": "coturn",
+    "name": "CoturnBBB2",
+    "id": "coturnbbb2",
     "packaging_format": 1,
     "description": {
+        "de": "Coturn on Yunohost für BBB2 mit static-auth-secret"
         "en": "VoIP media traffic NAT traversal server and gateway",
         "fr": "Serveur et passerelle NAT du trafic média VoIP"
     },
-    "version": "4.5.2.3~ynh1",
+    "version": "4.5.2.3~ynh1-bbb2",
     "url": "https://github.com/coturn/coturn",
     "upstream": {
         "license": "BSD-3-Clause",
