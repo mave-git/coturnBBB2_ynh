@@ -20,6 +20,8 @@ ynh_abort_if_errors
 # RETRIEVE ARGUMENTS FROM THE MANIFEST
 #=================================================
 
+public_ip4=""
+
 domain=$YNH_APP_ARG_DOMAIN
 
 app=$YNH_APP_INSTANCE_NAME
