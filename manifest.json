@@ -3,7 +3,7 @@
     "id": "coturnbbb2",
     "packaging_format": 1,
     "description": {
-        "de": "Coturn on Yunohost für BBB2 mit static-auth-secret"
+        "de": "Coturn on Yunohost für BBB2 mit static-auth-secret",
         "en": "VoIP media traffic NAT traversal server and gateway",
         "fr": "Serveur et passerelle NAT du trafic média VoIP"
     },
