@@ -56,7 +56,8 @@ fi
 ynh_script_progression --message="Finding an available port..." --weight=3
 
 # Find an available port
-turnserver_tls_port=$(ynh_find_port --port=5349)
+# Bigbluebuttons-Turnserver better goes on 443:
+turnserver_tls_port=443 #$(ynh_find_port --port=5349)
 turnserver_alt_tls_port=$(ynh_find_port --port=$((turnserver_tls_port+1)))
 cli_port=$(ynh_find_port --port=5766)
 
@@ -183,13 +184,10 @@ ynh_systemd_action --service_name=$app --action=restart --log_path="/var/log/$ap
 # WARNING : theses command are used in INSTALL, RESTORE
 # For any update do it in all files
 
-echo "Coturn server was successfully installed :)
+echo "Coturn server (as BigBlueButton-Installation) was successfully installed :)
 
-For testing we can use Trickle-Ice testing tool. Go to trickle-ice page https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/ and enter following details.
-
-STUN or TURN URI: turn:$domain:$turnserver_tls_port
-TURN username:    turnserver
-TURN password:    $turnserver_pwd
+STUN or TURN URI: turn:$domain: $turnserver_tls_port
+TURN static-auth-secret:        $turnserver_pwd
 
 If you're facing an issue or want to improve this app, please open a new issue in this project: https://github.com/YunoHost-Apps/coturn_ynh" > mail_to_send
 
