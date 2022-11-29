@@ -189,7 +189,7 @@ echo "Coturn server (as BigBlueButton-Installation) was successfully installed :
 STUN or TURN URI: turn:$domain: $turnserver_tls_port
 TURN static-auth-secret:        $turnserver_pwd
 
-If you're facing an issue or want to improve this app, please open a new issue in this project: https://github.com/YunoHost-Apps/coturn_ynh" > mail_to_send
+If you're facing an issue or want to improve this app, please open a new issue in this (cloned) project: https://github.com/mave-git/ynh_coturnBBB2" > mail_to_send
 
 ynh_send_readme_to_admin --app_message="mail_to_send" --type="install"
 
